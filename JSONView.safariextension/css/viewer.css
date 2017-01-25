@@ -1,0 +1,77 @@
+body {
+	margin: 0;
+	font-family: monospace;
+	font-size: 1.1em;
+}
+
+ul {
+	margin: 0 0 0 1.5em;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	position: relative;
+}
+
+main {
+	position: relative;
+	margin: 0.5em;
+	white-space: pre-wrap;
+}
+
+.property {
+	font-weight: bold;
+}
+
+.null {
+	color: red;
+}
+
+.boolean {
+	color: blue;
+}
+
+.number {
+	color: blue;
+}
+
+.string {
+	white-space: pre-wrap;
+	color: green;
+}
+
+.quote {
+	font-weight: normal;
+}
+
+.collapser {
+	position: absolute;
+	top: -0.2em;
+	left: -1em;
+	cursor: pointer;
+	transform: rotate(90deg);
+}
+
+.collapser:before {
+	content: "\25B8";
+}
+
+.collapser.collapsed {
+	transform: rotate(0deg);
+}
+
+.collapsible.collapsed {
+	display: inline-block;
+	width: 1em;
+	height: 1.2em;
+	margin: 0;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.collapsible.collapsed::before {
+	width: 1em;
+	margin-left: 0.2em;
+	content: "\2026";
+}
