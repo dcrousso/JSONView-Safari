@@ -259,17 +259,28 @@ function parseJSON(string) {
 }
 
 function createCollapserElement(target) {
+	function toggleCollapsed(element, flag) {
+		element.classList.toggle("collapsed", flag);
+
+		element.__target.classList.toggle("collapsed", flag);
+	}
+
 	let element = createDOM(
 		"span",
 		{
 			class: "collapser"
 		}
 	);
+	element.__target = target;
 
 	element.addEventListener("click", event => {
-		element.classList.toggle("collapsed");
+		toggleCollapsed(event.target);
 
-		target.classList.toggle("collapsed");
+		if (event.altKey) {
+			Array.from(element.__target.getElementsByClassName("collapser")).forEach(child => {
+				toggleCollapsed(child, element.classList.contains("collapsed"));
+			});
+		}
 	});
 
 	return element;

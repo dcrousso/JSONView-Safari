@@ -6,7 +6,7 @@ Pretty-prints JSON in Safari, instead of prompting to download it or rendering i
 
 Browser | Link | Version | Source Code
 ------- | ---- | ------- | -----------
-Safari | [Extensions Gallery](//safari-extensions.apple.com/details/?id=com.dcrousso.jsonview-safari-Q5M4T22BE9) | 1.0.1 | [github folder](//github.com/dcrousso/JSONView-Safari/tree/master/JSONView-Safari.safariextension/)
+Safari | [Extensions Gallery](//safari-extensions.apple.com/details/?id=com.dcrousso.jsonview-safari-Q5M4T22BE9) | 1.0.2 | [github folder](//github.com/dcrousso/JSONView-Safari/tree/master/JSONView-Safari.safariextension/)
 
 ### Changelog
 
@@ -14,5 +14,6 @@ Safari | [Extensions Gallery](//safari-extensions.apple.com/details/?id=com.dcro
  - Add separate styling for links, strings, numbers, booleans, and `null` values
     - Links are fully functional and will open in a separate tab
  - Collapsible array and object sections for easy navigation
+    - Hold `Option` to recursively expand/collapse all children of the clicked item
  - The path to each item is shown in the `title` attribute on hover
     - Clicking on the item will copy the path to the clipboard
