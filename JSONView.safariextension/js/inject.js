@@ -199,6 +199,10 @@ function fromObject(object, path) {
 				));
 			}
 
+			dataElement.addEventListener("click", event => {
+				copyContent([subpath]);
+			});
+
 			let dataContainer = container.appendChild(createDOM(
 				"li",
 				null,
@@ -218,6 +222,31 @@ function fromObject(object, path) {
 		fragment.appendChild(document.createTextNode("{ }"));
 
 	return fragment;
+}
+
+function copyContent(children) {
+	window.getSelection().removeAllRanges();
+
+	let container = document.createElement("div");
+	container.style.setProperty("position", "fixed");
+	container.style.setProperty("top", 0);
+	container.style.setProperty("left", 0);
+	container.style.setProperty("z-index", -1);
+	container.style.setProperty("opacity", 0);
+	container.style.setProperty("pointer-events", "none");
+	container.append(...children);
+
+	document.body.appendChild(container);
+
+	let range = document.createRange();
+	range.selectNode(container);
+	window.getSelection().addRange(range);
+
+	document.execCommand("copy");
+
+	window.getSelection().removeAllRanges();
+
+	container.remove();
 }
 
 function parseJSON(string) {
