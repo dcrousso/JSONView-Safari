@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Devin Rousso</string>
 	<key>Builder Version</key>
-	<string>12604.1.2</string>
+	<string>12604.1.8.1.2</string>
 	<key>CFBundleDisplayName</key>
 	<string>JSONView</string>
 	<key>CFBundleIdentifier</key>
@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
@@ -43,8 +43,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://devinrousso.com/projects/JSONView-Safari/SafariUpdate.plist</string>
+	<string>https://devinrousso.com/projects/JSONView-Safari/SafariUpdate.plist</string>
 	<key>Website</key>
-	<string>http://devinrousso.com</string>
+	<string>https://devinrousso.com</string>
 </dict>
 </plist>

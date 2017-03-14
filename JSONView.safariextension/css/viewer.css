@@ -18,6 +18,7 @@ main {
 	position: relative;
 	margin: 0.5em;
 	white-space: pre-wrap;
+	word-break: break-word;
 }
 
 .property {
